@@ -14,6 +14,7 @@ zsh-autosuggestions can be found [here](https://github.com/zsh-users/zsh-autosug
 
 oh-my-zsh has a much bigger set of features, but it's also slower to start, as a result. installing powerlevel10k and the plugins manually yields a lightning-fast prompt when opening a new shell.
 
+## ~~VIM~~ NeoVim
 
 ~~## .vimrc~~
 
