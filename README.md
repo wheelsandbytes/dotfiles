@@ -33,9 +33,11 @@ Drop the `.config` folder into your home directory (assuming no prior customizat
 
 Add `export XDG_CONFIG_HOME=$HOME/.config/` to your `bashrc`/`zshrc`
 
-Launch neovim with `nvim` and run `:PackerSync` to install the plugins
+Launch neovim with `nvim ~/.config/nvim/lua/tingle/packer.lua` 
+    - run `:source %`
+    - run `:PackerSync` to install the plugins
 
-Quit neovim with `:qa` and relaunch
+Quit neovim with `:qa` and relaunch as you would normally
 
 _hopefully it all works after those steps_
 
