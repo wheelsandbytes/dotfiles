@@ -14,19 +14,26 @@ zsh-autosuggestions can be found [here](https://github.com/zsh-users/zsh-autosug
 
 oh-my-zsh has a much bigger set of features, but it's also slower to start, as a result. installing powerlevel10k and the plugins manually yields a lightning-fast prompt when opening a new shell.
 
-## ~~VIM~~ NeoVim
+## ~~Vim~~ NeoVim
 
-~~## .vimrc~~
+~~### .vimrc~~
 
 ~~my vim setup is a bit messy, and uses a mixture of plugins installed via [vim-plug](https://github.com/junegunn/vim-plug), and via manual install (vim 8+ has built-in plugin support)~~
 
 
 _forget Vim_—NeoVim is the way!
 
-to use my config, install neovim with:
+To use my config, install neovim with:
 
 ```
 brew install neovim
+```
+
+Install Packer for NeoVim:
+
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
 Drop the `.config` folder into your home directory (assuming no prior customization of `XDG_CONFIG_HOME`)
