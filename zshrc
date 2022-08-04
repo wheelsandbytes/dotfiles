@@ -34,7 +34,13 @@ TIMESTAMP=$(date|sed 's/ /-/g'); cp $HOME/.zshrc $HOME/.zshrc_backups/.zshrc$(ec
 # zsh-syntax-highlighting
 [ -f "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-source $HOME/.config/powerlevel10k/powerlevel10k.zsh-theme
+# activate powerline10k
+P10K_PATH=$HOME/local/share/powerlevel10k
+[[ ! -d $P10K_PATH ]] && git clone https://github.com/romkatv/powerlevel10k.git $P10K_PATH
+source $P10K_PATH/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
+[[ ! -f $P10K_PATH/.p10k.zsh ]] || source $P10K_PATH/.p10k.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
