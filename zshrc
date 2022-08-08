@@ -10,12 +10,19 @@ fi
 set -o vi
 
 # set neovim as the editor
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # XDG_CONFIG_HOME is not set by default
 export XDG_CONFIG_HOME=$HOME/.config/
 
-export PATH=$HOME/bin:/usr/local/bin:opt/local/bin:/opt/local/sbin:$PATH
+# let's fix this mess:
+PATH=/usr/bin:/bin:/usr/sbin:/sbin
+PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=/usr/local/Homebrew/bin:$PATH
+PATH=/opt/brew/bin:/opt/brew/sbin:$PATH
+PATH=/opt/local/bin:/opt/local/sbin:$PATH
+PATH=$HOME/bin:$PATH
+export PATH
 
 # increase the zsh command history size
 export HISTFILESIZE=1000000000
@@ -24,18 +31,18 @@ export HISTFILESIZE=1000000000
 for configfile in $(ls -1 $HOME/.config/*rc); do 
    source $configfile;
 done
-
-# can't afford to lose this file again
-TIMESTAMP=$(date|sed 's/ /-/g'); cp $HOME/.zshrc $HOME/.zshrc_backups/.zshrc$(echo $TIMESTAMP)
-
 # zsh-autosuggestions plugin
 [ -f "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ] && source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # zsh-syntax-highlighting
 [ -f "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+# no_plugins.vim documentation
+NO_PLUGINS_VIM_PATH=$HOME/.vim/no_plugins
+[[ ! -d $NO_PLUGINS_VIM_PATH ]] && git clone https://github.com/changemewtf/no_plugins.git $NO_PLUGINS_VIM_PATH
+
 # activate powerline10k
-P10K_PATH=$HOME/local/share/powerlevel10k
+P10K_PATH=$HOME/.local/share/powerlevel10k
 [[ ! -d $P10K_PATH ]] && git clone https://github.com/romkatv/powerlevel10k.git $P10K_PATH
 source $P10K_PATH/powerlevel10k.zsh-theme
 
