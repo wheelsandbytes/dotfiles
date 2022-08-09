@@ -18,7 +18,7 @@ set path+=**
 set wildmenu
 
 " Hide buffers instead of closing them
-set hidden
+" set hidden
 
 " Ignore case when searching
 set ignorecase
