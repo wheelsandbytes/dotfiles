@@ -9,6 +9,9 @@ fi
 # to revert, set -o emacs
 set -o vi
 
+# For Mac specifics:
+# [[ $(uname) == "Darwin" ]] && [[ ! $(brew version) ]] && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # set neovim as the editor
 export EDITOR="vim"
 
@@ -38,8 +41,8 @@ done
 [ -f "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ] && source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # no_plugins.vim documentation
-NO_PLUGINS_VIM_PATH=$HOME/.vim/no_plugins
-[[ ! -d $NO_PLUGINS_VIM_PATH ]] && git clone https://github.com/changemewtf/no_plugins.git $NO_PLUGINS_VIM_PATH
+# NO_PLUGINS_VIM_PATH=$HOME/.vim/no_plugins
+# [[ ! -d $NO_PLUGINS_VIM_PATH ]] && git clone https://github.com/changemewtf/no_plugins.git $NO_PLUGINS_VIM_PATH
 
 # activate powerline10k
 P10K_PATH=$HOME/.local/share/powerlevel10k
