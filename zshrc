@@ -54,3 +54,11 @@ source $P10K_PATH/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+function nuke-xcode-tools() {
+  [[ ! $(uname) == "Darwin" ]] && echo "this is not a Mac" && exit 1
+  # nuke and repave Xcode tools for upgrade
+  sudo rm -rf /Library/Developer/CommandLineTools\
+    && sudo xcode-select --install\
+    && sudo xcode-select -s /Library/Developer/CommandLineTools
+}
