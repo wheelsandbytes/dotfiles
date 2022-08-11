@@ -1,6 +1,8 @@
 " 21st century Vim
 set nocompatible
 
+colorscheme slate
+
 " make le tags
 command! MakeTags !ctags -R .
 
@@ -35,6 +37,16 @@ set laststatus=2
 " Set regexpengine to 0 (automatic switching);
 " :help 're'
 set re=0
+
+" moar remaps
+nnoremap <leader>pv :Ex<CR>
+nnoremap <leader>vt :vert term<CR>
+nnoremap <leader>st :term<CR>
+nnoremap <leader>bu :bunload<CR>
+nnoremap <leader>fi :find<space>*
+nnoremap <leader>fr :%s/<C-r>"/
+nnoremap <C-S-Tab> gT
+nnoremap <C-Tab> gt
 
 " Disable arrow keys! Only use hjkl
 nnoremap <Down> :echo "No arrow keys allowed!"<CR>
@@ -214,4 +226,11 @@ set wildignore+=
   \*/node_modules/*,
   \*/tmp/*,
   \*/vendor/*
+
+" tweaks for netrw
+let g:netrw_banner=0  " disable annoying banner
+" let g:netrw_browse_split=4  "open in prior window
+" let g:netrw_altv=1  " open splits to the right
+let g:netrw_liststyle=3 " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
 
