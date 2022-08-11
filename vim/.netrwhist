@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/tim/edge/platform/hats'
+let g:netrw_dirhist_2='/Users'
+let g:netrw_dirhist_1='/Users/tim'
+let g:netrw_dirhist_0='/Users/tim/Development'
+let g:netrw_dirhist_9='/Users/tim/Development/dotfiles'
+let g:netrw_dirhist_8='/Users/tim/edge/platform/hats'
+let g:netrw_dirhist_7='/Users/tim/edge/platform/hats/assets/css/themes'
+let g:netrw_dirhist_6='/Users/tim/edge/platform/hats/assets/css'
+let g:netrw_dirhist_5='/Users/tim/edge/platform/hats/assets'
+let g:netrw_dirhist_4='/Users/tim/edge/platform/hats'
