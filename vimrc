@@ -45,8 +45,6 @@ nnoremap <leader>st :term<CR>
 nnoremap <leader>bu :bunload<CR>
 nnoremap <leader>fi :find<space>*
 nnoremap <leader>fr :%s/<C-r>"/
-nnoremap <C-S-Tab> gT
-nnoremap <C-Tab> gt
 
 " Disable arrow keys! Only use hjkl
 nnoremap <Down> :echo "No arrow keys allowed!"<CR>
