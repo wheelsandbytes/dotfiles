@@ -9,9 +9,6 @@ fi
 # to revert, set -o emacs
 set -o vi
 
-# For Mac specifics:
-# [[ $(uname) == "Darwin" ]] && [[ ! $(brew version) ]] && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # set neovim as the editor
 export EDITOR="vim"
 
