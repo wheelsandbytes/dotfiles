@@ -2,3 +2,4 @@ package-lock.json
 test.*
 packer_compiled.lua
 .netrwhist
+vim/.netrwhist
