@@ -45,6 +45,14 @@ nnoremap <leader>st :term<CR>
 nnoremap <leader>bu :bunload<CR>
 nnoremap <leader>fi :find<space>*
 nnoremap <leader>fr :%s/<C-r>"/
+nnoremap <leader>fmt :<S-g>Vgg=<CR>
+nnoremap <leader>] :bn<CR>
+nnoremap <leader>[ :bp<CR>
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+" indent ALL the lines
+nnoremap == gg=G<C-o><C-o>zz
 
 " Disable arrow keys! Only use hjkl
 nnoremap <Down> :echo "No arrow keys allowed!"<CR>
@@ -71,6 +79,7 @@ set hlsearch
 
 " Highlight current line
 set cursorline
+set cursorcolumn
 
 " Highlight too-long lines
 autocmd BufRead,InsertEnter,InsertLeave * 2match OverLength /\%100v.*/
@@ -142,7 +151,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
-set smartindent
+set autoindent
 
 " Disable maximum text width
 set textwidth=0
